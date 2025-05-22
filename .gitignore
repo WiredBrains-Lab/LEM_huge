@@ -4,7 +4,6 @@ __pycache__
 *.ipynb
 runs
 checkpoints
-*.json
 *.out
 *.tar
 *.txt

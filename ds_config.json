@@ -1,0 +1,23 @@
+{
+    "train_batch_size": 120,
+    "gradient_accumulation_steps": 1,
+    "dist_init_required": true,
+    "fp16": { "enabled": true },
+    "zero_optimization": {
+      "stage": 2,
+      "allgather_partitions": true,
+      "reduce_scatter": true,
+      "allgather_bucket_size": 50000000,
+      "reduce_bucket_size": 50000000,
+      "overlap_comm": true,
+      "contiguous_gradients": true,
+      "cpu_offload": true
+    },
+    "moe": {
+      "enabled": true,
+      "ep_size": 8,
+      "min_capacity": 1.0,
+      "max_capacity": 1.0
+    }
+  }
+  
